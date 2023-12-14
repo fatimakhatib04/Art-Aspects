@@ -1,14 +1,21 @@
 body {
     background-color: #d7d2d2;
-    font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+
+p {
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
 
 header {
     background-image: url(images/background.gif);
-    margin-top: 0;
     width: 100%;
     background-position: center;
+    margin-top: 0;
     margin-bottom: 3em;
 }
 
@@ -33,13 +40,9 @@ header p {
     padding: 3em;
 }
 
-p {
-    color: rgb(255, 255, 255);
-    font-family: Arial, sans-serif;
-    text-align: center;
-}
 
-.moto {
+
+main p {
     color: rgb(124, 119, 119);
     font-family: serif;
     font-style: italic;
@@ -69,18 +72,6 @@ cite {
     color: #777777;
 }
 
-a {
-    text-decoration: none;
-    color: #f9f9f9;
-    font-family: italic;
-}
-
-
-a:hover {
-    transform: translateY(-10px);
-}
-
-
 main div {
     display: flex;
     width: 100%;
@@ -89,6 +80,8 @@ main div {
 }
 
 main div a {
+    text-decoration: none;
+    color: #f9f9f9;    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,47 +92,69 @@ main div a {
     box-sizing: border-box;
     cursor: pointer;
     margin: 10px 15px;
-}
-
-main div a:nth-of-type(1) {
-
-    background-image: url(images/Bridge.png);
     background-position: center;
     background-size: cover;
     transition: 0.5;
+}
+
+
+main div a:nth-of-type(1) {
+
+    background-image: url(images/bridge.png);
 }
 
 main div a:nth-of-type(2) {
 
     background-image: url(images/socrates.png);
-    background-position: center;
-    background-size: cover;
-    transition: 0.5;
 }
 
 main div a:nth-of-type(3) {
 
     background-image: url(images/liberty.png);
-    background-position: center;
-    background-size: cover;
-    transition: 0.5;
 }
 
 main div a:nth-of-type(4) {
 
     background-image: url(images/swan.png);
-    background-position: center;
-    background-size: cover;
-    transition: 0.5;
+}
+
+
+a:hover {
+    transform: translateY(-10px);
 }
 
 main {
-    padding-bottom: 50px;
+    padding-bottom: 3em;
 }
 
 footer {
     border-top: 1px solid rgb(175, 166, 133);
-    padding-top: 20px;
+    padding-top: 1em;
     text-align: left;
     display: flex;
+    justify-content: space-around;
+}
+
+footer div {
+    width: 20%;
+    text-align: center;
+}
+
+footer div a {
+    text-decoration: underline black;
+    color: #000000;
+}
+
+section {
+    background-color:#aaaaaa;
+    color: rgb(255, 255, 255);
+}
+
+section p {
+    text-align: left;
+}
+
+.copyrights header h1 {
+    background-color: #5a5a5a;
+    width: 100%;
 }
