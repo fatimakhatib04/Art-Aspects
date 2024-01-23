@@ -18,7 +18,7 @@ h1 {
     width: 50%;
     border: 0;
     font-size: 100px;
-    margin:0;   
+    margin: 0;
     text-align: left;
     padding-top: 2em;
     padding-left: 2em;
@@ -34,7 +34,23 @@ header p {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+header nav {
+    display: flex;
+    justify-content: space-around; 
+}
 
+header nav a {
+    font-weight: bold;
+    text-shadow: 1px 1px #000000;
+    text-decoration: none;
+    color: #f9f9f9;
+    padding-top: 1em;
+}
+
+.active {
+    text-decoration: underline;
+    color: beige;
+}
 
 .moto {
     color: rgb(124, 119, 119);
@@ -53,6 +69,7 @@ blockquote {
     padding-bottom: 10px;
 
 }
+
 blockquote p {
     text-align: left;
     color: rgb(175, 166, 133)
@@ -72,7 +89,7 @@ h2 {
     padding-left: 10px;
 }
 
-main div {
+.home main nav {
     display: flex;
     width: 100%;
     align-items: center;
@@ -81,11 +98,11 @@ main div {
 
 /* https://youtu.be/Oa9LTDR9ugU?si=pmr5rUtl0nCvdUwY */
 /* https://www.w3schools.com/cssref/css3_pr_text-shadow.php */
-main div a {
+.home main nav a {
     font-weight: bold;
     text-shadow: 1px 1px #000000;
     text-decoration: none;
-    color: #f9f9f9;    
+    color: #f9f9f9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,28 +118,28 @@ main div a {
 }
 
 /* kim */
-main div a:nth-of-type(1) {
+.home main nav a:nth-of-type(1) {
 
     background-image: url(images/bridge.png);
 }
 
-main div a:nth-of-type(2) {
+.home main nav a:nth-of-type(2) {
 
     background-image: url(images/socrates.png);
 }
 
-main div a:nth-of-type(3) {
+.home main nav a:nth-of-type(3) {
 
     background-image: url(images/liberty.png);
 }
 
-main div a:nth-of-type(4) {
+.home main nav a:nth-of-type(4) {
 
     background-image: url(images/swan.png);
 }
 
 
-a:hover {
+.home main nav a:hover {
     transform: translateY(-10px);
 }
 
@@ -152,14 +169,14 @@ footer div a {
 }
 
 article {
-    background-color:#aaaaaa;
+    background-color: #aaaaaa;
     color: rgb(255, 255, 255);
     padding-top: 1em;
     padding-bottom: 1em;
 }
 
 
-article div:nth-of-type(1)  {
+article div:nth-of-type(1) {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -205,20 +222,52 @@ article div:nth-of-type(2):hover img {
     animation-play-state: paused;
 }
 
+/* https://youtu.be/YszONjKpgg4?si=ajHTqvGs19WwIg5n */
 @keyframes slideShow {
-    0%, 100% { opacity: 0; }
-    5% { opacity: 0; }
-    20% { opacity: 1 }
-    30%, 90% { opacity: 1; }
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1
+    }
+
+    30%,
+    90% {
+        opacity: 1;
+    }
 }
 
 
-article div:nth-of-type(2) img:nth-of-type(1) { animation-delay: 0s; }
-article div:nth-of-type(2) img:nth-of-type(2) { animation-delay: 3s; }
-article div:nth-of-type(2) img:nth-of-type(3) { animation-delay: 6s; }
-article div:nth-of-type(2) img:nth-of-type(4) { animation-delay: 9s; }
-article div:nth-of-type(2) img:nth-of-type(5) { animation-delay: 12s; }
-article div:nth-of-type(2) img:nth-of-type(6) { animation-delay: 15s; }
+article div:nth-of-type(2) img:nth-of-type(1) {
+    animation-delay: 0s;
+}
+
+article div:nth-of-type(2) img:nth-of-type(2) {
+    animation-delay: 3s;
+}
+
+article div:nth-of-type(2) img:nth-of-type(3) {
+    animation-delay: 6s;
+}
+
+article div:nth-of-type(2) img:nth-of-type(4) {
+    animation-delay: 9s;
+}
+
+article div:nth-of-type(2) img:nth-of-type(5) {
+    animation-delay: 12s;
+}
+
+article div:nth-of-type(2) img:nth-of-type(6) {
+    animation-delay: 15s;
+}
 
 
 article:nth-of-type(2) div {
@@ -239,15 +288,37 @@ article:nth-of-type(2) div img {
 }
 
 @keyframes slideShow {
-    0%, 100% { opacity: 0; }
-    5% { opacity: 0; }
-    20% { opacity: 1; }
-    30%, 90% { opacity: 1; }
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    30%,
+    90% {
+        opacity: 1;
+    }
 }
 
-article:nth-of-type(2) div img:nth-of-type(1) { animation-delay: 0s; }
-article:nth-of-type(2) div img:nth-of-type(2) { animation-delay: 3s; }
-article:nth-of-type(2) div img:nth-of-type(3) { animation-delay: 6s; }
+article:nth-of-type(2) div img:nth-of-type(1) {
+    animation-delay: 0s;
+}
+
+article:nth-of-type(2) div img:nth-of-type(2) {
+    animation-delay: 3s;
+}
+
+article:nth-of-type(2) div img:nth-of-type(3) {
+    animation-delay: 6s;
+}
 
 
 ul {
